@@ -26,8 +26,6 @@ StyleDictionaryPackage.registerTransform({
   type: 'value',
   matcher: function (prop) {
     const toMatch = ["fontSize", "paragraphSpacing", "lineHeight", "spacing", "borderRadius", "borderWidth", "sizing"];
-    console.log("candidate for px", prop);
-    console.log("result", toMatch.includes(prop.attributes.category) || toMatch.includes(prop.attributes.item));
     return toMatch.includes(prop.attributes.category) || toMatch.includes(prop.attributes.item);
   },
   transformer: function (prop) {
@@ -39,36 +37,17 @@ StyleDictionaryPackage.registerTransform({
 
 
 StyleDictionaryPackage.registerTransform({
-  name: 'fontWeight',
+  name: 'font/fontStyles',
   type: 'value',
   matcher: function (prop) {
-    console.log("candidate for font weight", prop);
-    console.log("result", (prop.attributes.category == "fontWeight") || (prop.attributes.item == "fontWeight"));
-    return (prop.attributes.category == "fontWeight") || (prop.attributes.item == "fontWeight");
+    const toMatch = ["fontWeight", "fontFamilies"];
+    return toMatch.includes(prop.attributes.category) || toMatch.includes(prop.attributes.item);
   },
   transformer: function (prop) {
-    console.log("2before transformation ", prop.value)
-    console.log("2after transformation ", fontWeights[prop])
-    return fontWeights[prop]; // replace "Bold/Regular/etc." with weight
+    if(prop.original.type == 'fontWeight') return fontWeights[prop]; // replace "Bold/Regular/etc." with weight
+    else return "" + prop.original.value; // font family e.g., brown pro should be a string TODO: udpate with correct string (switch based on brand)
   }
 });
-
-
-StyleDictionaryPackage.registerTransform({
-  name: 'fontFamily',
-  type: 'value',
-  matcher: function (prop) {
-    console.log("candidate family", prop)
-    console.log("result", (prop.attributes.category == "fontFamilies") || (prop.attributes.item == "fontFamilies"))
-    return (prop.attributes.category == "fontFamilies") || (prop.attributes.item == "fontFamilies");
-  },
-  transformer: function (prop) {
-    console.log("3before transformation ", prop.value)
-    console.log("3after transformation ", "" + prop.original.value)
-    return "" + prop.original.value; // font family e.g., brown pro should be a string TODO: udpate with correct string (switch based on brand)
-  }
-});
-
 
 
 function getStyleDictionaryConfig(brand) {
@@ -78,7 +57,7 @@ function getStyleDictionaryConfig(brand) {
     ],
     "platforms": {
       "web": {
-        "transforms": ["attribute/cti", "name/cti/kebab", "sizes/px", "fontWeight", "fontFamily"],
+        "transforms": ["attribute/cti", "name/cti/kebab", "sizes/px", "font/fontStyles"],
         "buildPath": `output/`,
         "files": [{
           "destination": `${brand}.scss`,
