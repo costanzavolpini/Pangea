@@ -42,11 +42,9 @@ StyleDictionaryPackage.registerTransform({
     return toMatch.includes(prop.attributes.category) || toMatch.includes(prop.attributes.item);
   },
   transformer: function (prop) {
-    console.log(prop)
-    console.log("HEREEEEE font weight ", fontWeights[prop])
-    console.log("HEREEEEE font family ", "" + prop.original.value)
-    if(prop.original.type == 'fontWeight') return fontWeights[prop]; // replace "Bold/Regular/etc." with weight
-    else return "" + prop.original.value; // font family e.g., brown pro should be a string TODO: udpate with correct string (switch based on brand)
+    if(prop.original.type == 'fontWeight') return fontWeights[prop.original.value]; // replace "Bold/Regular/etc." with weight
+    else if(prop.original.value == 'BrownPro') return `brown, helvetica, arial, sans-serif`; // Logitech
+    // add other brands with a switch
   }
 });
 
