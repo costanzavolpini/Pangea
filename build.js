@@ -1,4 +1,4 @@
-const StyleDictionary = require('style-dictionary');
+const StyleDictionaryPackage = require('style-dictionary');
 
 // Return something like "var(--color-blue)"
 function convertToVariableIfNeeded(value) {
@@ -11,7 +11,7 @@ function convertToVariableIfNeeded(value) {
 // Auto generate Style Dictionary config file
 
 // Color Format
-StyleDictionary.registerFormat({
+StyleDictionaryPackage.registerFormat({
     name: 'scss/variables',
     formatter: function (dictionary, config) {
       return `${this.selector} {
@@ -22,7 +22,7 @@ StyleDictionary.registerFormat({
 
 
   // Text Format
-  StyleDictionary.registerFormat({
+  StyleDictionaryPackage.registerFormat({
     name: "scss/typography",
     formatter: (dictionary, config) => (dictionary.allProperties.map((prop) => (`
   .${prop.name} {
@@ -40,7 +40,7 @@ StyleDictionary.registerFormat({
 
 // Transformer for Style Dictionary
 // Colors
-StyleDictionary.registerTransform({
+StyleDictionaryPackage.registerTransform({
     name: 'sizes/px',
     type: 'value',
     matcher: function(prop) {
@@ -60,7 +60,7 @@ const fontWeights = {
   'Bold': '700'
 }
 
-StyleDictionary.registerTransform({
+StyleDictionaryPackage.registerTransform({
   name: 'scss/typography',
   type: 'value',
   transitive: true,
@@ -115,7 +115,7 @@ console.log('Build started...');
     console.log('\n==============================================');
     console.log(`\nProcessing: [${brand}]`);
 
-    const StyleDictionary = StyleDictionary.extend(getStyleDictionaryConfig(brand));
+    const StyleDictionary = StyleDictionaryPackage.extend(getStyleDictionaryConfig(brand));
 
     StyleDictionary.buildPlatform('web');
 
