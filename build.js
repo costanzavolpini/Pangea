@@ -42,6 +42,7 @@ StyleDictionaryPackage.registerTransform({
     return toMatch.includes(prop.attributes.category) || toMatch.includes(prop.attributes.item);
   },
   transformer: function (prop) {
+    console.log(prop)
     console.log("HEREEEEE font weight ", fontWeights[prop])
     console.log("HEREEEEE font family ", "" + prop.original.value)
     if(prop.original.type == 'fontWeight') return fontWeights[prop]; // replace "Bold/Regular/etc." with weight
