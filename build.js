@@ -25,10 +25,16 @@ StyleDictionaryPackage.registerTransform({
     name: 'sizes/px',
     type: 'value',
     matcher: function(prop) {
+      const toMatch = ["fontSize", "paragraphSpacing", "lineHeight", "spacing", "borderRadius", "borderWidth", "sizing"];
         console.log("prop", prop)
-        return ["fontSize", "paragraphSpacing", "lineHeight", "spacing", "borderRadius", "borderWidth", "sizing"].includes(prop.attributes.category);
+        console.log("result", toMatch.includes(prop.attributes.category))
+        console.log("result", toMatch.includes(prop.attributes.item))
+        return toMatch.includes(prop.attributes.category) || toMatch.includes(prop.attributes.item);
     },
     transformer: function(prop) {
+      console.log("test weight", (prop.original.type))
+      console.log("test weight IF", (prop.original.type == 'fontWeight'));
+      console.log("test weight THEN", fontWeights[prop])
         if(prop.original.type == 'fontWeight') return fontWeights[prop]; // replace "Bold/Regular/etc." with weight
         return parseFloat(prop.original.value) + 'px';
     }
