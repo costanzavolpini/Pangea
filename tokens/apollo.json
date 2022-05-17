@@ -1124,7 +1124,41 @@
     }
   },
   "Quote": {
-    "Desktop + Tablet": {
+    "Desktop": {
+      "fontFamily": {
+        "value": "BrownPro",
+        "type": "fontFamily"
+      },
+      "fontWeight": {
+        "value": "Light Italic",
+        "type": "fontWeight"
+      },
+      "lineHeight": {
+        "value": 38,
+        "type": "lineHeight"
+      },
+      "fontSize": {
+        "value": 30,
+        "type": "fontSize"
+      },
+      "letterSpacing": {
+        "value": "0%",
+        "type": "letterSpacing"
+      },
+      "paragraphSpacing": {
+        "value": 0,
+        "type": "paragraphSpacing"
+      },
+      "textCase": {
+        "value": "none",
+        "type": "textCase"
+      },
+      "textDecoration": {
+        "value": "none",
+        "type": "textDecoration"
+      }
+    },
+    "Tablet": {
       "fontFamily": {
         "value": "BrownPro",
         "type": "fontFamily"
