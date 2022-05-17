@@ -13,11 +13,11 @@ jobs:
       # Install dependencies
       - run: npm install
       # Transform Figma Tokens JSON to something Style Dictionary can read
-      - run: npx token-transformer tokens.json tokens/global.json global
-      # Create tokens for Apollo, exclude the global tokens
-      - run: npx token-transformer tokens.json tokens/apollo.json global,apollo,theme global
-      # Create tokens for Artemis, exclude the global tokens
-      - run: npx token-transformer tokens.json tokens/artemis.json global,artemis,theme global
+      - run: npx token-transformer tokens.json tokens/pangea.json pangea
+      # Create tokens for Apollo
+      - run: npx token-transformer tokens.json tokens/apollo.json apollo
+      # Create tokens for Artemis
+      - run: npx token-transformer tokens.json tokens/artemis.json artemis
       # Convert tokens according to Style Dictionary config
       - run: node build.js
       # Add files that were created during a run, e.g. created files from style dictionary or token-transformer.
