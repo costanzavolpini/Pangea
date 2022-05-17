@@ -38,12 +38,11 @@ StyleDictionaryPackage.registerTransform({
   name: 'font/fontStyles',
   type: 'value',
   matcher: function (prop) {
-    console.log(prop)
-    const toMatch = ["fontWeight", "fontWeights", "fontFamilies"];
-    return toMatch.includes(prop.attributes.category) || toMatch.includes(prop.attributes.item) || toMatch.includes(prop.attributes.type);
+    const toMatch = ["fontWeight", "fontWeights", "fontFamilies", "fontFamily"];
+    return toMatch.includes(prop.attributes.category) || toMatch.includes(prop.attributes.item);
   },
   transformer: function (prop) {
-    if(prop.original.type == 'fontWeight') return fontWeights[prop.original.value]; // replace "Bold/Regular/etc." with weight
+    if(prop.original.type == 'fontWeight' || prop.original.type == 'fontWeights') return fontWeights[prop.original.value]; // replace "Bold/Regular/etc." with weight
     else if(prop.original.value == 'BrownPro') return `brown, helvetica, arial, sans-serif`; // Logitech
     // add other brands with a switch
   }
