@@ -1,0 +1,24 @@
+{
+  "_colors": {
+    "Black": {
+      "value": "#000",
+      "type": "color"
+    },
+    "White": {
+      "value": "fff",
+      "type": "color"
+    },
+    "Success": {
+      "value": "#00A300",
+      "type": "color"
+    },
+    "Warning": {
+      "value": "#E96500",
+      "type": "color"
+    },
+    "Error": {
+      "value": "#D62929",
+      "type": "color"
+    }
+  }
+}

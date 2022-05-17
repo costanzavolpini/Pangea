@@ -1,0 +1,50 @@
+{
+  "Primary": {
+    "Blue": {
+      "value": "#00B8FC",
+      "type": "color"
+    },
+    "Gray": {
+      "value": "#DADADA",
+      "type": "color"
+    }
+  },
+  "Secondary": {
+    "Dark-blue": {
+      "value": "#0090BF",
+      "type": "color"
+    },
+    "Gray": {
+      "1": {
+        "value": "#262626",
+        "type": "color"
+      },
+      "2": {
+        "value": "#2F3132",
+        "type": "color"
+      },
+      "3": {
+        "value": "#676767",
+        "type": "color"
+      },
+      "4": {
+        "value": "#C3C6C8",
+        "type": "color"
+      },
+      "5": {
+        "value": "#F4F4F4",
+        "type": "color"
+      }
+    }
+  },
+  "Gradients": {
+    "Blue-Black": {
+      "value": "linear-gradient(180deg, #00B8FC 0%, #676767 100%)",
+      "type": "color"
+    },
+    "Black-Gray": {
+      "value": "linear-gradient(180deg, #000000 0%, #676767 100%)",
+      "type": "color"
+    }
+  }
+}
