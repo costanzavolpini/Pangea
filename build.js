@@ -78,7 +78,7 @@ function getStyleDictionaryConfig(brand) {
     ],
     "platforms": {
       "web": {
-        "transforms": ["sizes/px", "fontWeight", "fontFamily"],
+        "transforms": ["attribute/cti", "name/cti/kebab", "sizes/px", "fontWeight", "fontFamily"],
         "buildPath": `output/`,
         "files": [{
           "destination": `${brand}.scss`,
