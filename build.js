@@ -22,21 +22,16 @@ StyleDictionaryPackage.registerFormat({
 
 // Transformer for Style Dictionary
 StyleDictionaryPackage.registerTransform({
-    name: 'sizes/px',
+    name: 'colors/typography',
     type: 'value',
     matcher: function(prop) {
-      const toMatch = ["fontSize", "paragraphSpacing", "lineHeight", "spacing", "borderRadius", "borderWidth", "sizing"];
-        console.log("prop", prop)
-        console.log("result", toMatch.includes(prop.attributes.category))
-        console.log("result", toMatch.includes(prop.attributes.item))
+        const toMatch = ["fontSize", "fontWeight", "fontFamilies", "paragraphSpacing", "lineHeight", "spacing", "borderRadius", "borderWidth", "sizing"];
         return toMatch.includes(prop.attributes.category) || toMatch.includes(prop.attributes.item);
     },
     transformer: function(prop) {
-      console.log("test weight", (prop.original.type))
-      console.log("test weight IF", (prop.original.type == 'fontWeight'));
-      console.log("test weight THEN", fontWeights[prop])
         if(prop.original.type == 'fontWeight') return fontWeights[prop]; // replace "Bold/Regular/etc." with weight
-        return parseFloat(prop.original.value) + 'px';
+        else if(prop.original.type == 'fontFamilies') return "" + prop.original.value; // font family e.g., brown pro should be a string
+        return parseFloat(prop.original.value) + 'px'; // append px
     }
     });
 
