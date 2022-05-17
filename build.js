@@ -115,7 +115,7 @@ console.log('Build started...');
     console.log('\n==============================================');
     console.log(`\nProcessing: [${brand}]`);
 
-    const StyleDictionary = StyleDictionaryPackage.extend(getStyleDictionaryConfig(brand));
+    const StyleDictionary = StyleDictionary.extend(getStyleDictionaryConfig(brand));
 
     StyleDictionary.buildPlatform('web');
 
