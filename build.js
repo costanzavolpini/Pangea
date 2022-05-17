@@ -7,7 +7,8 @@ const fontWeights = {
   'Light Italic': '200',
   'Regular': '400',
   'Italic': '400',
-  'Bold': '700'
+  'Bold': '700',
+  'Bold Italic': '700'
 }
 
 // Color Format
