@@ -11,6 +11,7 @@ StyleDictionaryPackage.registerFormat({
   });  
 
 // Transformer for Style Dictionary
+// Colors
 StyleDictionaryPackage.registerTransform({
     name: 'sizes/px',
     type: 'value',
@@ -22,19 +23,51 @@ StyleDictionaryPackage.registerTransform({
     }
     });
 
-function getStyleDictionaryConfig(theme) {
+// Texts
+const fontWeights = {
+  'Light': '200',
+  'Light Italic': '200',
+  'Regular': '400',
+  'Italic': '400',
+  'Bold': '700'
+}
+
+StyleDictionaryPackage.registerTransform({
+  name: 'scss/typography',
+  type: 'value',
+  matcher: function(token) {
+    return token.original.type === 'typography';
+  },
+  transformer: function(token) {
+    const typographyProps = token.original.value;
+    const typographyPropsArray = [];
+
+    for (let prop in typographyProps) {
+      if(prop === 'fontWeight') {
+        typographyPropsArray.push(`"${prop}": ${fontWeights[typographyProps[prop]]}`);
+      } else if (["lineHeight", "fontSize", "paragraphSpacing"].includes(prop)) {
+        typographyPropsArray.push(`"${prop}": ${typographyProps[prop]}px`);
+      } else {
+        typographyPropsArray.push(`"${prop}": ${typographyProps[prop]}`);
+      }
+    }
+    return `(${typographyPropsArray.join()})`;
+  }
+  });
+
+function getStyleDictionaryConfig(brand) {
   return {
     "source": [
-      `tokens/${theme}.json`,
+      `tokens/${brand}.json`,
     ],
     "platforms": {
       "web": {
         "transforms": ["attribute/cti", "name/cti/kebab", "sizes/px"],
         "buildPath": `output/`,
         "files": [{
-            "destination": `${theme}.scss`,
+            "destination": `${brand}.scss`,
             "format": "scss/variables",
-            "selector": `.${theme}-theme`
+            "selector": `.${brand}-theme`
           }]
       }
     }
@@ -44,13 +77,12 @@ function getStyleDictionaryConfig(theme) {
 console.log('Build started...');
 
 // PROCESS THE DESIGN TOKENS FOR THE DIFFEREN BRANDS AND PLATFORMS
-
-['pangea', 'apollo', 'artemis'].map(function (theme) {
+['pangea', 'apollo', 'artemis'].map(function (brand) {
 
     console.log('\n==============================================');
-    console.log(`\nProcessing: [${theme}]`);
+    console.log(`\nProcessing: [${brand}]`);
 
-    const StyleDictionary = StyleDictionaryPackage.extend(getStyleDictionaryConfig(theme));
+    const StyleDictionary = StyleDictionaryPackage.extend(getStyleDictionaryConfig(brand));
 
     StyleDictionary.buildPlatform('web');
 
