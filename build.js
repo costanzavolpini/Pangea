@@ -38,9 +38,8 @@ StyleDictionaryPackage.registerTransform({
   name: 'font/fontStyles',
   type: 'value',
   matcher: function (prop) {
-    console.log(prop)
     const toMatch = ["fontWeight", "fontFamilies"];
-    return toMatch.includes(prop.attributes.category) || toMatch.includes(prop.attributes.item);
+    return toMatch.includes(prop.attributes.category) || toMatch.includes(prop.attributes.item) || toMatch.includes(prop.attributes.type);
   },
   transformer: function (prop) {
     if(prop.original.type == 'fontWeight') return fontWeights[prop.original.value]; // replace "Bold/Regular/etc." with weight
