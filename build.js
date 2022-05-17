@@ -25,11 +25,11 @@ StyleDictionaryPackage.registerTransform({
     name: 'sizes/px',
     type: 'value',
     matcher: function(prop) {
+        console.log("prop", prop)
         return ["fontSize", "paragraphSpacing", "lineHeight", "spacing", "borderRadius", "borderWidth", "sizing"].includes(prop.attributes.category);
     },
     transformer: function(prop) {
-        console.log("prop", prop)
-        if(prop === 'fontWeight') return fontWeights[prop]; // replace "Bold/Regular/etc." with weight
+        if(prop.original.type == 'fontWeight') return fontWeights[prop]; // replace "Bold/Regular/etc." with weight
         return parseFloat(prop.original.value) + 'px';
     }
     });
