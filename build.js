@@ -39,11 +39,11 @@ StyleDictionaryPackage.registerTransform({
   type: 'value',
   matcher: function (prop) {
     const toMatch = ["fontWeight", "fontFamilies"];
-    console.log("PASSA DI QUA")
     return toMatch.includes(prop.attributes.category) || toMatch.includes(prop.attributes.item);
   },
   transformer: function (prop) {
-    console.log("HEREEEEE")
+    console.log("HEREEEEE font weight ", fontWeights[prop])
+    console.log("HEREEEEE font family ", "" + prop.original.value)
     if(prop.original.type == 'fontWeight') return fontWeights[prop]; // replace "Bold/Regular/etc." with weight
     else return "" + prop.original.value; // font family e.g., brown pro should be a string TODO: udpate with correct string (switch based on brand)
   }
