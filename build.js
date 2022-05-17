@@ -38,6 +38,7 @@ StyleDictionaryPackage.registerTransform({
   name: 'font/fontStyles',
   type: 'value',
   matcher: function (prop) {
+    console.log(prop)
     const toMatch = ["fontWeight", "fontFamilies"];
     return toMatch.includes(prop.attributes.category) || toMatch.includes(prop.attributes.item);
   },
