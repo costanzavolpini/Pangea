@@ -292,7 +292,41 @@
     }
   },
   "MARQUEE": {
-    "Desktop + Tablet": {
+    "Desktop": {
+      "fontFamily": {
+        "value": "BrownPro",
+        "type": "fontFamily"
+      },
+      "fontWeight": {
+        "value": "Bold",
+        "type": "fontWeight"
+      },
+      "lineHeight": {
+        "value": 90,
+        "type": "lineHeight"
+      },
+      "fontSize": {
+        "value": 90,
+        "type": "fontSize"
+      },
+      "letterSpacing": {
+        "value": "-1%",
+        "type": "letterSpacing"
+      },
+      "paragraphSpacing": {
+        "value": 0,
+        "type": "paragraphSpacing"
+      },
+      "textCase": {
+        "value": "uppercase",
+        "type": "textCase"
+      },
+      "textDecoration": {
+        "value": "none",
+        "type": "textDecoration"
+      }
+    },
+    "Tablet": {
       "fontFamily": {
         "value": "BrownPro",
         "type": "fontFamily"
