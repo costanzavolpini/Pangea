@@ -4,6 +4,7 @@ $neutral-cemento: #697172;
 $neutral-acier: #c3c6c8;
 $neutral-grigio: #e1e2e3;
 $neutral-marin: #f4f4f4;
+$neutral-light: $Neutral.White;
 $logitech-azzurro: #00B8FC;
 $logitech-ciano: #00EAD0;
 $logitech-kirsche: #ff2947;
@@ -443,4 +444,8 @@ $layout-s: 40;
 $layout-xs: 20;
 $layout-xxs: 10;
 $scale: 1.25;
+$action-text-primary-dark: $Neutral.Black;
+$action-text-primary-light: $Neutral.White;
+$action-bg-primary-dark: #2f3132;
+$action-bg-primary-light: $Neutral.White;
       }

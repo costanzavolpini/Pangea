@@ -19,6 +19,11 @@
     "Marin": {
       "value": "#f4f4f4",
       "type": "color"
+    },
+    "Light": {
+      "value": "$Neutral.White",
+      "type": "color",
+      "failedToResolve": true
     }
   },
   "Logitech": {
@@ -1950,5 +1955,34 @@
   "Scale": {
     "value": 1.25,
     "type": "sizing"
+  },
+  "action": {
+    "text": {
+      "primary": {
+        "dark": {
+          "value": "$Neutral.Black",
+          "type": "color",
+          "failedToResolve": true
+        },
+        "light": {
+          "value": "$Neutral.White",
+          "type": "color",
+          "failedToResolve": true
+        }
+      }
+    },
+    "bg": {
+      "primary": {
+        "dark": {
+          "value": "#2f3132",
+          "type": "color"
+        },
+        "light": {
+          "value": "$Neutral.White",
+          "type": "color",
+          "failedToResolve": true
+        }
+      }
+    }
   }
 }
