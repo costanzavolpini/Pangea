@@ -7,6 +7,16 @@
     "Gray": {
       "value": "#DADADA",
       "type": "color"
+    },
+    "GBlack": {
+      "value": "$Neutral.Black",
+      "type": "color",
+      "failedToResolve": true
+    },
+    "GWhite": {
+      "value": "$Neutral.White",
+      "type": "color",
+      "failedToResolve": true
     }
   },
   "Secondary": {
@@ -45,6 +55,57 @@
     "Black-Gray": {
       "value": "linear-gradient(180deg, #000000 0%, #676767 100%)",
       "type": "color"
+    }
+  },
+  "action": {
+    "text": {
+      "primary": {
+        "light": {
+          "value": "$Neutral.White",
+          "type": "color",
+          "failedToResolve": true
+        },
+        "dark": {
+          "value": "$Neutral.Black",
+          "type": "color",
+          "failedToResolve": true
+        }
+      },
+      "buy": {
+        "light": {
+          "value": "$Neutral.Black",
+          "type": "color",
+          "failedToResolve": true
+        },
+        "dark": {
+          "value": "$Neutral.Black",
+          "type": "color",
+          "failedToResolve": true
+        }
+      }
+    },
+    "bg": {
+      "primary": {
+        "light": {
+          "value": "#2F3132",
+          "type": "color"
+        },
+        "dark": {
+          "value": "$Neutral.White",
+          "type": "color",
+          "failedToResolve": true
+        }
+      },
+      "buy": {
+        "light": {
+          "value": "#00B8FC",
+          "type": "color"
+        },
+        "dark": {
+          "value": "#00B8FC",
+          "type": "color"
+        }
+      }
     }
   }
 }

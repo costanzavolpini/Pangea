@@ -1,6 +1,8 @@
 .artemis-theme {
         $primary-blue: #00B8FC;
 $primary-gray: #DADADA;
+$primary-g-black: $Neutral.Black;
+$primary-g-white: $Neutral.White;
 $secondary-dark-blue: #0090BF;
 $secondary-gray-1: #262626;
 $secondary-gray-2: #2F3132;
@@ -9,4 +11,12 @@ $secondary-gray-4: #C3C6C8;
 $secondary-gray-5: #F4F4F4;
 $gradients-blue-black: linear-gradient(180deg, #00B8FC 0%, #676767 100%);
 $gradients-black-gray: linear-gradient(180deg, #000000 0%, #676767 100%);
+$action-text-primary-light: $Neutral.White;
+$action-text-primary-dark: $Neutral.Black;
+$action-text-buy-light: $Neutral.Black;
+$action-text-buy-dark: $Neutral.Black;
+$action-bg-primary-light: #2F3132;
+$action-bg-primary-dark: $Neutral.White;
+$action-bg-buy-light: #00B8FC;
+$action-bg-buy-dark: #00B8FC;
       }
