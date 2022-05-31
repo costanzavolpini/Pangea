@@ -1,5 +1,10 @@
 {
   "Neutral": {
+    "Dark": {
+      "value": "$Neutral.Black",
+      "type": "color",
+      "failedToResolve": true
+    },
     "Kohle": {
       "value": "#2f3132",
       "type": "color"
@@ -1959,13 +1964,24 @@
   "action": {
     "text": {
       "primary": {
+        "light": {
+          "value": "$Neutral.White",
+          "type": "color",
+          "failedToResolve": true
+        },
         "dark": {
           "value": "$Neutral.Black",
           "type": "color",
           "failedToResolve": true
-        },
+        }
+      },
+      "buy": {
         "light": {
-          "value": "$Neutral.White",
+          "value": "#Dcfd00",
+          "type": "color"
+        },
+        "dark": {
+          "value": "$Neutral.Black",
           "type": "color",
           "failedToResolve": true
         }
@@ -1973,14 +1989,24 @@
     },
     "bg": {
       "primary": {
-        "dark": {
+        "light": {
           "value": "#2f3132",
           "type": "color"
         },
-        "light": {
+        "dark": {
           "value": "$Neutral.White",
           "type": "color",
           "failedToResolve": true
+        }
+      },
+      "buy": {
+        "light": {
+          "value": "#2f3132",
+          "type": "color"
+        },
+        "dark": {
+          "value": "#Dcfd00",
+          "type": "color"
         }
       }
     }

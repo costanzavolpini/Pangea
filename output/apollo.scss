@@ -1,5 +1,6 @@
 .apollo-theme {
-        $neutral-kohle: #2f3132;
+        $neutral-dark: $Neutral.Black;
+$neutral-kohle: #2f3132;
 $neutral-cemento: #697172;
 $neutral-acier: #c3c6c8;
 $neutral-grigio: #e1e2e3;
@@ -444,8 +445,12 @@ $layout-s: 40;
 $layout-xs: 20;
 $layout-xxs: 10;
 $scale: 1.25;
-$action-text-primary-dark: $Neutral.Black;
 $action-text-primary-light: $Neutral.White;
-$action-bg-primary-dark: #2f3132;
-$action-bg-primary-light: $Neutral.White;
+$action-text-primary-dark: $Neutral.Black;
+$action-text-buy-light: #Dcfd00;
+$action-text-buy-dark: $Neutral.Black;
+$action-bg-primary-light: #2f3132;
+$action-bg-primary-dark: $Neutral.White;
+$action-bg-buy-light: #2f3132;
+$action-bg-buy-dark: #Dcfd00;
       }
