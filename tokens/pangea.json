@@ -22,5 +22,21 @@
       "value": "#D62929",
       "type": "color"
     }
+  },
+  "icon": {
+    "stroke": {
+      "color": {
+        "primary": {
+          "dark": {
+            "value": "#000",
+            "type": "color"
+          },
+          "light": {
+            "value": "#fff",
+            "type": "color"
+          }
+        }
+      }
+    }
   }
 }
