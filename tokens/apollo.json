@@ -1961,53 +1961,141 @@
     "value": 1.25,
     "type": "sizing"
   },
-  "action": {
-    "text": {
-      "primary": {
-        "light": {
-          "value": "$Neutral.White",
-          "type": "color",
-          "failedToResolve": true
-        },
-        "dark": {
-          "value": "$Neutral.Black",
-          "type": "color",
-          "failedToResolve": true
+  "semantic": {
+    "cta": {
+      "text": {
+        "color": {
+          "light": {
+            "value": "$Neutral.White",
+            "type": "color",
+            "failedToResolve": true
+          },
+          "dark": {
+            "value": "$Neutral.Black",
+            "type": "color",
+            "failedToResolve": true
+          },
+          "buy": {
+            "value": "#Dcfd00",
+            "type": "color"
+          }
         }
       },
-      "buy": {
-        "light": {
-          "value": "#Dcfd00",
-          "type": "color"
-        },
-        "dark": {
-          "value": "$Neutral.Black",
-          "type": "color",
-          "failedToResolve": true
+      "icon": {
+        "color": {
+          "dark": {
+            "value": "$icon.stroke.color.dark",
+            "type": "color",
+            "failedToResolve": true
+          },
+          "light": {
+            "value": "$icon.stroke.color.light",
+            "type": "color",
+            "failedToResolve": true
+          },
+          "buy": {
+            "value": "#Dcfd00",
+            "type": "color"
+          }
         }
       }
     },
-    "bg": {
-      "primary": {
-        "light": {
-          "value": "#2f3132",
-          "type": "color"
-        },
-        "dark": {
-          "value": "$Neutral.White",
-          "type": "color",
-          "failedToResolve": true
+    "button": {
+      "color": {
+        "background": {
+          "primary": {
+            "dark": {
+              "value": "#2f3132",
+              "type": "color"
+            },
+            "light": {
+              "value": "$Neutral.White",
+              "type": "color",
+              "failedToResolve": true
+            }
+          },
+          "buy": {
+            "dark": {
+              "value": "#2f3132",
+              "type": "color"
+            },
+            "light": {
+              "value": "#Dcfd00",
+              "type": "color"
+            }
+          }
         }
       },
-      "buy": {
-        "light": {
-          "value": "#2f3132",
-          "type": "color"
-        },
-        "dark": {
-          "value": "#Dcfd00",
-          "type": "color"
+      "icon": {
+        "stroke": {
+          "color": {
+            "primary": {
+              "dark": {
+                "value": "$icon.stroke.color.light",
+                "type": "color",
+                "failedToResolve": true
+              },
+              "light": {
+                "value": "$icon.stroke.color.dark",
+                "type": "color",
+                "failedToResolve": true
+              }
+            },
+            "buy": {
+              "dark": {
+                "value": "#Dcfd00",
+                "type": "color"
+              },
+              "light": {
+                "value": "$icon.stroke.color.dark",
+                "type": "color",
+                "failedToResolve": true
+              }
+            }
+          }
         }
+      },
+      "text": {
+        "color": {
+          "primary": {
+            "dark": {
+              "value": "$text.color.cta.light",
+              "type": "color",
+              "failedToResolve": true
+            },
+            "light": {
+              "value": "$Neutral.Black",
+              "type": "color",
+              "failedToResolve": true
+            }
+          },
+          "buy": {
+            "dark": {
+              "value": "#Dcfd00",
+              "type": "color"
+            },
+            "light": {
+              "value": "$Neutral.Black",
+              "type": "color",
+              "failedToResolve": true
+            }
+          }
+        }
+      }
+    },
+    "background": {
+      "dark-1": {
+        "value": "#2f3132",
+        "type": "color"
+      },
+      "light-1": {
+        "value": "$Neutral.White",
+        "type": "color",
+        "failedToResolve": true
+      },
+      "white-2": {
+        "value": "#f4f4f4",
+        "type": "color"
       }
     }
   }

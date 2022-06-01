@@ -106,6 +106,160 @@
           "type": "color"
         }
       }
+    },
+    "icon": {
+      "stroke": {
+        "color": {
+          "primary": {
+            "dark": {
+              "value": "$icon.stroke.color.dark",
+              "type": "color",
+              "failedToResolve": true
+            },
+            "light": {
+              "value": "$icon.stroke.color.light",
+              "type": "color",
+              "failedToResolve": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "semantic": {
+    "cta": {
+      "text": {
+        "color": {
+          "light": {
+            "value": "$Neutral.White",
+            "type": "color",
+            "failedToResolve": true
+          },
+          "dark": {
+            "value": "$Neutral.Black",
+            "type": "color",
+            "failedToResolve": true
+          }
+        }
+      },
+      "icon": {
+        "color": {
+          "dark": {
+            "value": "$icon.stroke.color.dark",
+            "type": "color",
+            "failedToResolve": true
+          },
+          "light": {
+            "value": "$icon.stroke.color.light",
+            "type": "color",
+            "failedToResolve": true
+          }
+        }
+      }
+    },
+    "background": {
+      "dark-1": {
+        "value": "#262626",
+        "type": "color"
+      },
+      "dark-2": {
+        "value": "#2F3132",
+        "type": "color"
+      },
+      "light-1": {
+        "value": "$Neutral.White",
+        "type": "color",
+        "failedToResolve": true
+      },
+      "blue-1": {
+        "value": "#00B8FC",
+        "type": "color"
+      }
+    },
+    "button": {
+      "color": {
+        "background": {
+          "primary": {
+            "dark": {
+              "value": "#2F3132",
+              "type": "color"
+            },
+            "light": {
+              "value": "$Neutral.White",
+              "type": "color",
+              "failedToResolve": true
+            }
+          },
+          "buy": {
+            "light": {
+              "value": "#00B8FC",
+              "type": "color"
+            },
+            "dark": {
+              "value": "#00B8FC",
+              "type": "color"
+            }
+          }
+        }
+      },
+      "icon": {
+        "stroke": {
+          "color": {
+            "primary": {
+              "dark": {
+                "value": "$icon.stroke.color.light",
+                "type": "color",
+                "failedToResolve": true
+              },
+              "light": {
+                "value": "$icon.stroke.color.dark",
+                "type": "color",
+                "failedToResolve": true
+              }
+            },
+            "buy": {
+              "light": {
+                "value": "$icon.stroke.color.dark",
+                "type": "color",
+                "failedToResolve": true
+              },
+              "dark": {
+                "value": "$icon.stroke.color.dark",
+                "type": "color",
+                "failedToResolve": true
+              }
+            }
+          }
+        }
+      },
+      "text": {
+        "color": {
+          "primary": {
+            "dark": {
+              "value": "$Neutral.White",
+              "type": "color",
+              "failedToResolve": true
+            },
+            "light": {
+              "value": "$Neutral.Black",
+              "type": "color",
+              "failedToResolve": true
+            }
+          },
+          "buy": {
+            "light": {
+              "value": "$Neutral.Black",
+              "type": "color",
+              "failedToResolve": true
+            },
+            "dark": {
+              "value": "$Neutral.Black",
+              "type": "color",
+              "failedToResolve": true
+            }
+          }
+        }
+      }
     }
   }
 }

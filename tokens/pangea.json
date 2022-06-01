@@ -26,15 +26,37 @@
   "icon": {
     "stroke": {
       "color": {
-        "primary": {
-          "dark": {
-            "value": "#000",
-            "type": "color"
-          },
-          "light": {
-            "value": "#fff",
-            "type": "color"
-          }
+        "dark": {
+          "value": "#000",
+          "type": "color"
+        },
+        "light": {
+          "value": "#fff",
+          "type": "color"
+        }
+      }
+    }
+  },
+  "text": {
+    "color": {
+      "heading": {
+        "dark": {
+          "value": "#000",
+          "type": "color"
+        },
+        "light": {
+          "value": "#fff",
+          "type": "color"
+        }
+      },
+      "cta": {
+        "dark": {
+          "value": "#000",
+          "type": "color"
+        },
+        "light": {
+          "value": "#fff",
+          "type": "color"
         }
       }
     }
