@@ -1,4 +1,4 @@
-# Logitech Design Systems
+# Design Systems
 System of systems: Pangea (parent), Apollo, Artemis
 
 Apollo Design System: Logitech brand </br>
