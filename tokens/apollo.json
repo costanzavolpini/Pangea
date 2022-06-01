@@ -2081,6 +2081,56 @@
             }
           }
         }
+      },
+      "padding": {
+        "left": {
+          "default": {
+            "value": 30,
+            "type": "spacing"
+          },
+          "compact": {
+            "value": 15,
+            "type": "spacing"
+          }
+        },
+        "right": {
+          "default": {
+            "value": 30,
+            "type": "spacing"
+          },
+          "compact": {
+            "value": 15,
+            "type": "spacing"
+          }
+        },
+        "top": {
+          "default": {
+            "value": 16,
+            "type": "spacing"
+          },
+          "compact": {
+            "value": 8,
+            "type": "spacing"
+          }
+        },
+        "bottom": {
+          "default": {
+            "value": 16,
+            "type": "spacing"
+          },
+          "compact": {
+            "value": 8,
+            "type": "spacing"
+          }
+        }
+      },
+      "gap": {
+        "value": 13,
+        "type": "spacing"
+      },
+      "radius": {
+        "value": 0,
+        "type": "borderRadius"
       }
     },
     "background": {
