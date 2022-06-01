@@ -259,6 +259,56 @@
             }
           }
         }
+      },
+      "padding": {
+        "left": {
+          "default": {
+            "value": 42,
+            "type": "spacing"
+          },
+          "compact": {
+            "value": 20,
+            "type": "spacing"
+          }
+        },
+        "right": {
+          "default": {
+            "value": 42,
+            "type": "spacing"
+          },
+          "compact": {
+            "value": 20,
+            "type": "spacing"
+          }
+        },
+        "top": {
+          "default": {
+            "value": 16,
+            "type": "spacing"
+          },
+          "compact": {
+            "value": 10,
+            "type": "spacing"
+          }
+        },
+        "bottom": {
+          "default": {
+            "value": 16,
+            "type": "spacing"
+          },
+          "compact": {
+            "value": 10,
+            "type": "spacing"
+          }
+        }
+      },
+      "gap": {
+        "value": 10,
+        "type": "spacing"
+      },
+      "radius": {
+        "value": 4,
+        "type": "borderRadius"
       }
     }
   }
