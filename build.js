@@ -1,41 +1,69 @@
 const StyleDictionaryPackage = require('style-dictionary');
 
 // Auto generate Style Dictionary config file
+
+const fontWeights = {
+  'Light': '200',
+  'Light Italic': '200',
+  'Regular': '400',
+  'Italic': '400',
+  'Bold': '700',
+  'Bold Italic': '700'
+}
+
+// Color Format
 StyleDictionaryPackage.registerFormat({
-    name: 'css/variables',
-    formatter: function (dictionary, config) {
-      return `${this.selector} {
-        ${dictionary.allProperties.map(prop => `  --${prop.name}: ${prop.value};`).join('\n')}
+  name: 'scss/variables',
+  formatter: function (dictionary, config) {
+    return `${this.selector} {
+        ${dictionary.allProperties.map(prop => `$${prop.name}: ${prop.value};`).join('\n')}
       }`
-    }
-  });  
+  }
+});
 
 // Transformer for Style Dictionary
 StyleDictionaryPackage.registerTransform({
-    name: 'sizes/px',
-    type: 'value',
-    matcher: function(prop) {
-        return ["fontSize", "spacing", "borderRadius", "borderWidth", "sizing"].includes(prop.attributes.category);
-    },
-    transformer: function(prop) {
-        return parseFloat(prop.original.value) + 'px';
-    }
-    });
+  name: 'sizes/px',
+  type: 'value',
+  matcher: function (prop) {
+    const toMatch = ["fontSize", "paragraphSpacing", "lineHeight", "spacing", "borderRadius", "borderWidth", "sizing"];
+    return toMatch.includes(prop.attributes.category) || toMatch.includes(prop.attributes.item);
+  },
+  transformer: function (prop) {
+    return parseFloat(prop.original.value) + 'px'; // append px
+  }
+});
 
-function getStyleDictionaryConfig(theme) {
+
+StyleDictionaryPackage.registerTransform({
+  name: 'font/fontStyles',
+  type: 'value',
+  matcher: function (prop) {
+    const toMatch = ["fontWeight", "fontWeights", "fontFamilies", "fontFamily"];
+    return toMatch.includes(prop.attributes.category) || toMatch.includes(prop.attributes.item);
+  },
+  transformer: function (prop) {
+    if(prop.original.type == 'fontWeight' || prop.original.type == 'fontWeights') return fontWeights[prop.original.value]; // replace "Bold/Regular/etc." with weight
+    else if(prop.original.value == 'BrownPro') return `brown, helvetica, arial, sans-serif`; // Logitech
+    // add other brands with a switch
+  }
+});
+
+
+function getStyleDictionaryConfig(brand) {
   return {
     "source": [
-      `tokens/${theme}.json`,
+      `tokens/${brand}.json`,
     ],
     "platforms": {
       "web": {
-        "transforms": ["attribute/cti", "name/cti/kebab", "sizes/px"],
+        "transforms": ["attribute/cti", "name/cti/kebab", "sizes/px", "font/fontStyles"],
         "buildPath": `output/`,
         "files": [{
-            "destination": `${theme}.css`,
-            "format": "css/variables",
-            "selector": `.${theme}-theme`
-          }]
+          "destination": `${brand}.scss`,
+          "format": "scss/variables",
+          "selector": `.${brand}-theme`
+        }]
       }
     }
   };
@@ -44,17 +72,16 @@ function getStyleDictionaryConfig(theme) {
 console.log('Build started...');
 
 // PROCESS THE DESIGN TOKENS FOR THE DIFFEREN BRANDS AND PLATFORMS
+['pangea', 'apollo', 'artemis'].map(function (brand) {
 
-['pangea', 'apollo', 'artemis'].map(function (theme) {
+  console.log('\n==============================================');
+  console.log(`\nProcessing: [${brand}]`);
 
-    console.log('\n==============================================');
-    console.log(`\nProcessing: [${theme}]`);
+  const StyleDictionary = StyleDictionaryPackage.extend(getStyleDictionaryConfig(brand));
 
-    const StyleDictionary = StyleDictionaryPackage.extend(getStyleDictionaryConfig(theme));
+  StyleDictionary.buildPlatform('web');
 
-    StyleDictionary.buildPlatform('web');
-
-    console.log('\nEnd processing');
+  console.log('\nEnd processing');
 })
 
 console.log('\n==============================================');

@@ -22,5 +22,43 @@
       "value": "#D62929",
       "type": "color"
     }
+  },
+  "icon": {
+    "stroke": {
+      "color": {
+        "dark": {
+          "value": "#000",
+          "type": "color"
+        },
+        "light": {
+          "value": "#fff",
+          "type": "color"
+        }
+      }
+    }
+  },
+  "text": {
+    "color": {
+      "heading": {
+        "dark": {
+          "value": "#000",
+          "type": "color"
+        },
+        "light": {
+          "value": "#fff",
+          "type": "color"
+        }
+      },
+      "cta": {
+        "dark": {
+          "value": "#000",
+          "type": "color"
+        },
+        "light": {
+          "value": "#fff",
+          "type": "color"
+        }
+      }
+    }
   }
 }

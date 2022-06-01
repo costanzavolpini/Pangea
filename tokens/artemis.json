@@ -7,6 +7,16 @@
     "Gray": {
       "value": "#DADADA",
       "type": "color"
+    },
+    "GBlack": {
+      "value": "$Neutral.Black",
+      "type": "color",
+      "failedToResolve": true
+    },
+    "GWhite": {
+      "value": "$Neutral.White",
+      "type": "color",
+      "failedToResolve": true
     }
   },
   "Secondary": {
@@ -45,6 +55,261 @@
     "Black-Gray": {
       "value": "linear-gradient(180deg, #000000 0%, #676767 100%)",
       "type": "color"
+    }
+  },
+  "action": {
+    "text": {
+      "primary": {
+        "light": {
+          "value": "$Neutral.White",
+          "type": "color",
+          "failedToResolve": true
+        },
+        "dark": {
+          "value": "$Neutral.Black",
+          "type": "color",
+          "failedToResolve": true
+        }
+      },
+      "buy": {
+        "light": {
+          "value": "$Neutral.Black",
+          "type": "color",
+          "failedToResolve": true
+        },
+        "dark": {
+          "value": "$Neutral.Black",
+          "type": "color",
+          "failedToResolve": true
+        }
+      }
+    },
+    "bg": {
+      "primary": {
+        "light": {
+          "value": "#2F3132",
+          "type": "color"
+        },
+        "dark": {
+          "value": "$Neutral.White",
+          "type": "color",
+          "failedToResolve": true
+        }
+      },
+      "buy": {
+        "light": {
+          "value": "#00B8FC",
+          "type": "color"
+        },
+        "dark": {
+          "value": "#00B8FC",
+          "type": "color"
+        }
+      }
+    },
+    "icon": {
+      "stroke": {
+        "color": {
+          "primary": {
+            "dark": {
+              "value": "$icon.stroke.color.dark",
+              "type": "color",
+              "failedToResolve": true
+            },
+            "light": {
+              "value": "$icon.stroke.color.light",
+              "type": "color",
+              "failedToResolve": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "semantic": {
+    "cta": {
+      "text": {
+        "color": {
+          "light": {
+            "value": "$Neutral.White",
+            "type": "color",
+            "failedToResolve": true
+          },
+          "dark": {
+            "value": "$Neutral.Black",
+            "type": "color",
+            "failedToResolve": true
+          }
+        }
+      },
+      "icon": {
+        "color": {
+          "dark": {
+            "value": "$icon.stroke.color.dark",
+            "type": "color",
+            "failedToResolve": true
+          },
+          "light": {
+            "value": "$icon.stroke.color.light",
+            "type": "color",
+            "failedToResolve": true
+          }
+        }
+      }
+    },
+    "background": {
+      "dark-1": {
+        "value": "#262626",
+        "type": "color"
+      },
+      "dark-2": {
+        "value": "#2F3132",
+        "type": "color"
+      },
+      "light-1": {
+        "value": "$Neutral.White",
+        "type": "color",
+        "failedToResolve": true
+      },
+      "blue-1": {
+        "value": "#00B8FC",
+        "type": "color"
+      }
+    },
+    "button": {
+      "color": {
+        "background": {
+          "primary": {
+            "dark": {
+              "value": "#2F3132",
+              "type": "color"
+            },
+            "light": {
+              "value": "$Neutral.White",
+              "type": "color",
+              "failedToResolve": true
+            }
+          },
+          "buy": {
+            "light": {
+              "value": "#00B8FC",
+              "type": "color"
+            },
+            "dark": {
+              "value": "#00B8FC",
+              "type": "color"
+            }
+          }
+        }
+      },
+      "icon": {
+        "stroke": {
+          "color": {
+            "primary": {
+              "dark": {
+                "value": "$icon.stroke.color.light",
+                "type": "color",
+                "failedToResolve": true
+              },
+              "light": {
+                "value": "$icon.stroke.color.dark",
+                "type": "color",
+                "failedToResolve": true
+              }
+            },
+            "buy": {
+              "light": {
+                "value": "$icon.stroke.color.dark",
+                "type": "color",
+                "failedToResolve": true
+              },
+              "dark": {
+                "value": "$icon.stroke.color.dark",
+                "type": "color",
+                "failedToResolve": true
+              }
+            }
+          }
+        }
+      },
+      "text": {
+        "color": {
+          "primary": {
+            "dark": {
+              "value": "$Neutral.White",
+              "type": "color",
+              "failedToResolve": true
+            },
+            "light": {
+              "value": "$Neutral.Black",
+              "type": "color",
+              "failedToResolve": true
+            }
+          },
+          "buy": {
+            "light": {
+              "value": "$Neutral.Black",
+              "type": "color",
+              "failedToResolve": true
+            },
+            "dark": {
+              "value": "$Neutral.Black",
+              "type": "color",
+              "failedToResolve": true
+            }
+          }
+        }
+      },
+      "padding": {
+        "left": {
+          "default": {
+            "value": 42,
+            "type": "spacing"
+          },
+          "compact": {
+            "value": 20,
+            "type": "spacing"
+          }
+        },
+        "right": {
+          "default": {
+            "value": 42,
+            "type": "spacing"
+          },
+          "compact": {
+            "value": 20,
+            "type": "spacing"
+          }
+        },
+        "top": {
+          "default": {
+            "value": 16,
+            "type": "spacing"
+          },
+          "compact": {
+            "value": 10,
+            "type": "spacing"
+          }
+        },
+        "bottom": {
+          "default": {
+            "value": 16,
+            "type": "spacing"
+          },
+          "compact": {
+            "value": 10,
+            "type": "spacing"
+          }
+        }
+      },
+      "gap": {
+        "value": 10,
+        "type": "spacing"
+      },
+      "radius": {
+        "value": 4,
+        "type": "borderRadius"
+      }
     }
   }
 }
