@@ -72,7 +72,7 @@ function getStyleDictionaryConfig(brand) {
 console.log('Build started...');
 
 // PROCESS THE DESIGN TOKENS FOR THE DIFFEREN BRANDS AND PLATFORMS
-['pangea', 'apollo', 'artemis'].map(function (brand) {
+['pangea', 'apollo', 'artemis', 'components'].map(function (brand) {
 
   console.log('\n==============================================');
   console.log(`\nProcessing: [${brand}]`);
