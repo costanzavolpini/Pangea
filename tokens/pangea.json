@@ -60,5 +60,181 @@
         }
       }
     }
+  },
+  "semantic": {
+    "cta": {
+      "text": {
+        "color": {
+          "light": {
+            "value": "#fff",
+            "type": "color"
+          },
+          "dark": {
+            "value": "#000",
+            "type": "color"
+          },
+          "buy": {
+            "value": "#000",
+            "type": "color"
+          }
+        }
+      },
+      "icon": {
+        "color": {
+          "dark": {
+            "value": "#000",
+            "type": "color"
+          },
+          "light": {
+            "value": "#fff",
+            "type": "color"
+          },
+          "buy": {
+            "value": "#000",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "button": {
+      "color": {
+        "background": {
+          "primary": {
+            "dark": {
+              "value": "#000",
+              "type": "color"
+            },
+            "light": {
+              "value": "#fff",
+              "type": "color"
+            }
+          },
+          "buy": {
+            "dark": {
+              "value": "#000",
+              "type": "color"
+            },
+            "light": {
+              "value": "#fff",
+              "type": "color"
+            }
+          }
+        }
+      },
+      "icon": {
+        "stroke": {
+          "color": {
+            "primary": {
+              "dark": {
+                "value": "#fff",
+                "type": "color"
+              },
+              "light": {
+                "value": "#000",
+                "type": "color"
+              }
+            },
+            "buy": {
+              "dark": {
+                "value": "#000",
+                "type": "color"
+              },
+              "light": {
+                "value": "#000",
+                "type": "color"
+              }
+            }
+          }
+        }
+      },
+      "text": {
+        "color": {
+          "primary": {
+            "dark": {
+              "value": "#fff",
+              "type": "color"
+            },
+            "light": {
+              "value": "#000",
+              "type": "color"
+            }
+          },
+          "buy": {
+            "dark": {
+              "value": "#000",
+              "type": "color"
+            },
+            "light": {
+              "value": "#000",
+              "type": "color"
+            }
+          }
+        }
+      },
+      "padding": {
+        "left": {
+          "default": {
+            "value": 30,
+            "type": "spacing"
+          },
+          "compact": {
+            "value": 15,
+            "type": "spacing"
+          }
+        },
+        "right": {
+          "default": {
+            "value": 30,
+            "type": "spacing"
+          },
+          "compact": {
+            "value": 15,
+            "type": "spacing"
+          }
+        },
+        "top": {
+          "default": {
+            "value": 16,
+            "type": "spacing"
+          },
+          "compact": {
+            "value": 8,
+            "type": "spacing"
+          }
+        },
+        "bottom": {
+          "default": {
+            "value": 16,
+            "type": "spacing"
+          },
+          "compact": {
+            "value": 8,
+            "type": "spacing"
+          }
+        }
+      },
+      "gap": {
+        "value": 13,
+        "type": "spacing"
+      },
+      "radius": {
+        "value": 0,
+        "type": "borderRadius"
+      }
+    },
+    "background": {
+      "dark-1": {
+        "value": "#000",
+        "type": "color"
+      },
+      "light-1": {
+        "value": "#fff",
+        "type": "color"
+      },
+      "white-2": {
+        "value": "#fff",
+        "type": "color"
+      }
+    }
   }
 }
