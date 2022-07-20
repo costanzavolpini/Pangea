@@ -136,7 +136,7 @@
             },
             "buy": {
               "dark": {
-                "value": "#000",
+                "value": "#fff",
                 "type": "color"
               },
               "light": {
@@ -161,7 +161,7 @@
           },
           "buy": {
             "dark": {
-              "value": "#000",
+              "value": "#fff",
               "type": "color"
             },
             "light": {
